@@ -1,0 +1,44 @@
+= Getting Started with JSilver =
+
+== Hello World ==
+Here's a template...
+
+`[hello-world.cs]`
+{{{
+    Hello <?cs var:name.first ?> <?cs var:name.last ?>!
+}}}
+
+Here's a bit of Java...
+
+`[HelloWorld.java]`
+{{{
+    JSilver jSilver = new JSilver(new FileResourceLoader("/path/to/my/templates"));
+
+    Data data = jSilver.createData();
+    data.setValue("name.first", "Some");
+    data.setValue("name.last", "Blokey");
+
+    Writer output = ...;
+    jSilver.render("hello-world.cs", data, output);
+}}}
+Here's what happens when you run it...
+{{{
+    Hello Some Blokey!
+}}}
+== A bit more detail ==
+
+That was easy. Let's go into a teeny bit more detail.
+
+=== Templates ===
+{{{
+    Hello <?cs var:name.first ?> <?cs var:name.last ?>!
+}}}
+The template syntax is identical to !ClearSilver. Anything that's valid in a !ClearSilver template is valid in a JSilver template too.
+
+Read the external !ClearSilver docs on templates:
+
+  * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Ftemplate_basics.hdf ClearSilver Basics]
+  * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_templates.hdf Template Syntax]
+    * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_expressions.hdf Expressions]
+    * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_macros.hdf Macros]
+    * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_filters.hdf Functions]
