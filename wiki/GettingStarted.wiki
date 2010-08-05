@@ -37,8 +37,8 @@ The template syntax is identical to !ClearSilver. Anything that's valid in a !Cl
 
 Read the external !ClearSilver docs on templates:
 
-  * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Ftemplate_basics.hdf ClearSilver Basics]
-  * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_templates.hdf Template Syntax]
-    * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_expressions.hdf Expressions]
-    * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_macros.hdf Macros]
-    * [http://www.google.com/url?sa=D&q=http%3A%2F%2Fwww.clearsilver.net%2Fdocs%2Fman_filters.hdf Functions]
+  * [http://www.clearsilver.net/docs/template_basics.hdf ClearSilver Basics]
+  * [http://www.clearsilver.net/docs/man_templates.hdf Template Syntax]
+    * [http://www.clearsilver.net/docs/man_expressions.hdf Expressions]
+    * [http://www.clearsilver.net/docs/man_macros.hdf Macros]
+    * [http://www.clearsilver.net/docs/man_filters.hdf Functions]
