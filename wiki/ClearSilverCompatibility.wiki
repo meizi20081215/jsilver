@@ -14,7 +14,27 @@ In CS, when a file is included through *include* it shares the same set of macro
 
 === The inline directive. ===
 
-JS supports a new inline directive with '<?cs inline ?>' and '<?cs /inline ?>. This wraps a section of a template and suppresses outputting of any template whitespace. This is useful when writing complex macros that are to emit a simple inline result.
+JS supports a new inline directive with '<?cs inline ?>' and '<?cs /inline ?>. This wraps a section of a template and suppresses outputting any literal whitespace. This is useful when writing complex macros that are to emit a simple inline result. When using this directive the literal template text within the inline section may only contain whitespace.
+
+Instead of:
+{{{
+<?cs def:func() ?>Result: <?cs if:x ?><?cs var:foo ?><?cs else ?><?cs:var:bar ?><?cs /if ?><?cs /def ?>
+}}}
+
+You can now write:
+{{{
+<?cs def:func() ?><?cs inline ?>
+  <?cs var:"Result: " ?>
+  <?cs if:x ?>
+    <?cs var:foo ?>
+  <?cs else ?>
+    <?cs var:bar ?>
+  <?cs /if ?>
+<?cs /inline ?><?cs /def ?>
+}}}
+(Note how the 'Result: ' string must now be emitted by a var command rather than just being in the template.)
+
+This makes it much easier to write complex macros that are structured like normal programming languages.
 
 == API ==
 The core JSilver Java API has been completely redesigned - it looks very different to the CS wrappers. You should find it a lot simpler and easier to extend. However, to facilitate migration to JSilver, we have implemented HDF and CS adaptors that allow JSilver to be enabled by adding a single line of code.
