@@ -18,7 +18,7 @@ JS supports a new inline directive with '<?cs inline ?>' and '<?cs /inline ?>. T
 
 Instead of:
 {{{
-<?cs def:func() ?>Result: <?cs if:x ?><?cs var:foo ?><?cs else ?><?cs:var:bar ?><?cs /if ?><?cs /def ?>
+<?cs def:func() ?>Result: <?cs if:x ?><?cs var:foo ?><?cs else ?><?cs var:bar ?><?cs /if ?><?cs /def ?>
 }}}
 
 You can now write:
