@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.google.jsilver</groupId>
     <artifactId>jsilver</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>JSilver</name>
     <description>Pure-Java implementation of Clearsilver templating engine.</description>
@@ -97,8 +97,7 @@
             <phase>generate-sources</phase>
             <configuration>
               <tasks>
-                 <copy file="${basedir}/sablecc/optimizations/AOptimizedMultipleCommand.java" 
-                       todir="${basedir}/build/gen/com/google/clearsilver/jsilver/syntax/node" />
+                 <copy file="${basedir}/sablecc/optimizations/AOptimizedMultipleCommand.java" todir="${basedir}/build/gen/com/google/clearsilver/jsilver/syntax/node" />
               </tasks>
             </configuration>
             <goals>
